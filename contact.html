@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> <u> Request a Quote</u></h1>
+    <form action="http://127.0.0.1:5500/" method="GET" >
+        <div class="form-row">
+            <label> 
+                First name:
+            </label>
+            <input type=text name="first-name" required />
+        </div>
+        <div class="form-row"> 
+             <label> 
+                Last name:
+                <input type=text name="last-name" required />
+            </label>
+        </div>
+        
+
+        <!-- 
+            <label> 
+            First name:
+            <input type=text name="first-name" required />
+        </label>
+        <label> 
+            Last name:
+            <input type=text name="last-name" required />
+        </label>
+        
+        This will show the last name field and the first name field on the same line. If you had css you could make the last name be under the first name by changing the display to block instead of inline. However, html is a great layout tool.
+        
+        Css will one day take care of this so we are using it as a class.
+
+         -->
+
+         
+        
+    </form>
+        <!-- Or, you can write it like this for the same result:
+        <form action="#" method="GET">
+        <label for="first-name"> 
+            First name:
+        </label>
+        <input type=text name="first-name" id="first-name"/>
+        <button type="submit">Send</button>
+    </form>
+        -->
+
+        <div class="form-row">
+            <label> 
+               <span class="label-text"> Email:</span>
+                <input type=email name="email" />
+            </label>
+        </div>
+        <div class="form-row">
+            <label>
+                <span class="label-text"> Phone number </span>
+                <input 
+                    type=tel
+                    name="phone" 
+                    required 
+                    placeholder="Format: 703-000-1111">
+
+                    <!-- pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"--> 
+            </label>
+        </div>
+        <!-- Remember "div.form-row *enter*"-->
+        <div class="form-row"> 
+            <div class="label-text"> Message (if desired):</div>
+             <textarea name="message" cols="30" rows="10" > </textarea>
+            </div>
+            <!-- You can type in between the text area Tags<textarea name= ...> Text here </textarea?-->
+            <select name="topic">
+                <option value="How did you hear about us?">How did you hear about us?
+                    </option>
+            <option value="Google">google</option>
+            <option value="Angi's">Angi's</option>
+            <option value="Yelp">Yelp</option>
+            <option value="Friend/Family">Friend/Family</option>  
+            </select>
+
+        <div class="form-row">
+            <fieldset>
+                <legend>
+                    Topic
+                </legend> 
+                <label>
+                    <input type=radio name=topic value=CSS/> 
+                    HTML
+                </label>
+                <label>
+                    <input type=radio name=topic value=CSS/>
+                    CSS
+                </label>
+                <label>
+                    <input type=radio name=topic value=CSS/>
+                    JavaScript
+                </label>
+            </fieldset>
+
+        <div class="form-row">
+            <fielset>
+                <legend> Request:
+                <label>
+                    <input type="checkbox" name="advice">
+                    Advice
+                        <!-- add "checked" inside field for it to be automatically checked.-->
+                </label>
+                <label>
+                    <input type="checkbox" name="information">
+                    Information
+                </label>
+                <label>
+                     <input type="checkbox" name="motivation" checked>
+                     Motivation
+                </label>
+                </legend>
+            </fielset>
+
+        </div>
+
+        <div class="form-row">
+            <select name="gender">
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="other">Other</option>
+                <option value="do-not-diclose">Do not Disclose</option>
+            </select>
+        </div>
+        
+        <div class="form-row">
+            <button type="button" id="Submit"> Send </button>
+            <button type="button" id="clear">Clear</button>
+        </div>
+    
+</body>
+</html>f
